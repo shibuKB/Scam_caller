@@ -32,7 +32,7 @@ Basically going to be a Truecaller clone.
  
 
  - Every required file should be downloaded with it and you wont be installing any more dependencies.
- - Now setup a database and modify the `dbConfig.js` as per your database.
+ - Now setup a database and modify the `dbConfig.js` file as per your database.
  
 
 
