@@ -1,30 +1,39 @@
-##################################################################################################################################################
-#################################################################################################################################################
+# Scam_caller
 
-################################### BEWARE APIs ARE NOT TESTED PROPERLY ########################################################################
-
-author: shibuKB
-version: 1.0.0
-description: backend for an app that create, store and retrieve record of phone numbers of spammer (and possibly other user)
+Basically going to be a Truecaller clone.
 
 
-#CONFIGURATION AND SETUP
 
->Go to dbConfig.js file to configure your connection for your database.
->run ' npm i ' to install any dependency (should not be required).
->run 'node index.js' to start the backend. It will automatically connect to database and create required tables in database if properly configured.
-> Server is set to run on port 8080, as of now it can only be change directly in source code.( at index.js)
+ - A back-end written in javascript. 
+ - Used sequelize orm to talk with database.
+ - Also used express to speedup development time.
+ - Wrote some REST api end point to talk with client side app.
+ 
 
-#IMPROVEMENT NEEDED
 
->Add a configuration file for server settings.
->Hash password before storing it to database.
->Make authentication feature to limit access to RESTful api.
->Some controllers are not working **BEWARE**.
->dt:24-01-2024 : work needed on add user
-                
+# Dependencies and Packages
 
-#IMPROVED!
->dt:24-01-2024 : simple implementation of spammer api working as intended.
+ - node@16.16.0
+ - express@4.18.2
+ - mysql2@3.7.1
+ - nodemon@3.0.3
+ - sequelize@6.35.2
 
-                regduser worked! but need impoverment.logging out at 23:00
+
+
+
+## Installation
+
+ - Make a new directory/folder on your local computer.
+ - Go to the directory/folder and initialize git in it. Open a terminal window in it and copy paste the following and hit enter. 
+
+    `git clone https://github.com/shibuKB/Scam_caller.git`
+
+ 
+
+ - Every required file should be downloaded with it and you wont be installing any more dependencies.
+ - Now setup a database and modify the `dbConfig.js` as per your database.
+ 
+
+
+
