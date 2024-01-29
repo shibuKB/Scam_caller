@@ -1,4 +1,4 @@
-# Scam_caller
+# Spam_caller
 
 Basically going to be a Truecaller clone.
 
