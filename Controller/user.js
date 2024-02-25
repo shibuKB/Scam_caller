@@ -1,26 +1,16 @@
 const db = require('../models');
-const { use } = require('../routes/api');
+
 
 const User= db.user;
 
-const newUser = db.userCredential;
+
 
 //user registration
 
 const regdUser = async (req, res) => {
   
-    let info ={
-
-        name:req.body.name,
-
-        phoneNo:req.body.phoneNo,
-
-        email: req.body.email,
-
-        pass:req.body.pass
-
-        
-    }
+    const { name, phoneNo, email, pass } = req.body;
+    
             let [userData, isUserNew ] = await User.findOrCreate({
                 where :{
                     name: req.body.name,

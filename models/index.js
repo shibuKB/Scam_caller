@@ -20,35 +20,28 @@ const sequelize = new Sequelize(
   
   sequelize.authenticate()
   .then(() => {
-      console.log('connected..')
+      console.log('Database connection established successfully...')
   })
   .catch(err => {
-      console.log('Error'+ err)
+      console.log('ErrorError connecting to the database:', err)
   })
 
 
-    const db = {}
+//Define yo model
 
-db.Sequelize = Sequelize
+const db = {}
+
+
 db.sequelize = sequelize
 
 db.user = require('./userModel.js')(sequelize, DataTypes);
 
 db.spammer= require('./spammerModel.js')(sequelize, DataTypes);
 
-sequelize.authenticate()
-  .then(() => {
-      console.log('connected..')
-  })
-  .catch(err => {
-      console.log('Error'+ err)
-  });
-
-db.userCredential = require('./userCredentialModel.js')(sequelize, DataTypes)
 
 db.sequelize.sync({ force: false })
 .then(() => {
-    console.log('synced with db')
+    console.log('Models Synced with db')
 })
 
-module.exports = db
+module.exports = db;
