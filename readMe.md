@@ -18,7 +18,7 @@ Basically going to be a Truecaller clone.
  - mysql2@3.7.1
  - nodemon@3.0.3
  - sequelize@6.35.2
-
+ - bcrypt@5.1.1
 
 
 
